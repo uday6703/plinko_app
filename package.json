@@ -1,0 +1,29 @@
+{
+  "name": "plinko-mern-stack",
+  "version": "1.0.0",
+  "description": "Plinko game built with MERN stack (MongoDB/SQLite, Express, React, Node.js)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "server:dev": "cd backend && npm run dev", 
+    "client": "cd frontend && npm start",
+    "client:dev": "cd frontend && npm start",
+    "build": "npm run client:build && npm run server:build",
+    "client:build": "cd frontend && npm run build",
+    "server:build": "cd backend && npm run build",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "test": "cd backend && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": ["plinko", "game", "mern", "react", "express", "node", "provably-fair"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
